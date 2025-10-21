@@ -9,5 +9,5 @@ This project presents an accessibility-oriented application that enables hands-f
 https://medium.com/@amit25173/opencv-eye-tracking-aeb4f1b46aa3
 
 ### Formerly Referenced / Obsolete
-https://medium.com/analytics-vidhya/haar-cascades-explained-38210e57970d
-https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+https://medium.com/analytics-vidhya/haar-cascades-explained-38210e57970d  
+https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html  
