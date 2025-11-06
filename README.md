@@ -7,6 +7,9 @@ This project presents an accessibility-oriented application that enables hands-f
 ## Python Resources Referenced
 ### Currently Referenced
 https://medium.com/@amit25173/opencv-eye-tracking-aeb4f1b46aa3
+https://pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/
+https://pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/
+https://pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/
 
 ### Formerly Referenced / Obsolete
 https://medium.com/analytics-vidhya/haar-cascades-explained-38210e57970d  
