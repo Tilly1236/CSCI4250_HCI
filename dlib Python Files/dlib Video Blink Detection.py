@@ -16,10 +16,13 @@ def main():
     # frames the eye must be below the threshold
     EYE_AR_THRESH = 0.2
     EYE_AR_CONSEC_FRAMES = 2
+    DOUBLE_BLINK_CONSEC_FRAMES = 20
 
     # initialize frame counters and total number of blinks
     FRAME_COUNTER = 0
     TOTAL_BLINKS = 0
+    TIME_BETWEEN_BLINKS = 0
+    TOTAL_DOUBLE_BLINKS = 0
 
     # create argument parser and then parse
     ap = argparse.ArgumentParser()
@@ -90,8 +93,18 @@ def main():
                 if FRAME_COUNTER >= EYE_AR_CONSEC_FRAMES:
                     TOTAL_BLINKS += 1
 
+                    # check if time between blinks was below threshold,
+                    # if so, double blink occurred
+                    if TIME_BETWEEN_BLINKS <= DOUBLE_BLINK_CONSEC_FRAMES:
+                        TOTAL_DOUBLE_BLINKS += 1
+                    # reset time between blinks
+                    TIME_BETWEEN_BLINKS = 0
+
                 # reset eye frame counter
                 FRAME_COUNTER = 0
+
+                # count frames between blinks
+                TIME_BETWEEN_BLINKS += 1
 
 
             # display number of blinks and current EAR
@@ -99,6 +112,10 @@ def main():
                         (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
             cv2.putText(frame, "EAR: {}".format(ear),
                         (250, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+            cv2.putText(frame, "DOUBLES: {}".format(TOTAL_DOUBLE_BLINKS),
+                        (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+            cv2.putText(frame, "FRAMES: {}".format(TIME_BETWEEN_BLINKS),
+                        (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
         # show the frame
         cv2.imshow("Frame", frame)
