@@ -1,0 +1,44 @@
+/* Style Sheet for App.py */
+
+/* Found all of these colors on htmlcolorcodes.com */
+QLabel#title {
+    font-size: 36px;
+    padding: 15px;
+    qproperty-alignment: AlignCenter;
+}
+
+QPushButton {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #64649C;
+    color: white;
+}
+
+QPushButton:hover {
+    background-color: #50507D
+}
+
+QPushButton#start_button {
+    background-color: #91BF75;
+}
+
+QPushButton#start_button:hover {
+    background-color: #73995D;
+}
+
+QPushButton#about_button {
+    background-color: #7AB0C4
+}
+
+QPushButton#about_button:hover {
+    background-color: #5C899C;
+}
+
+QPushButton#exit_button {
+    background-color: #C75A5A;
+}
+
+QPushButton#exit_button:hover {
+    background-color: #8F3D3D;
+}
